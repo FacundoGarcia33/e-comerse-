@@ -17,7 +17,7 @@ let eliminarProducto = document.querySelector("#eliminar-carrito");
 let productosCantidad = document.querySelector("#productos-cantidad");
 let carritoContenido = document.querySelector("#carrito-contenido");
 
-// Inicializar la cantidad del carrito
+// cantidad del carrito
 actualizarCantidad();
 
 // Dandole eventos a los botones 
@@ -31,9 +31,9 @@ producto7.addEventListener("click", () => agregarProducto({ nombre: "Parlante jd
 producto8.addEventListener("click", () => agregarProducto({ nombre: "Silla Gamer reclinable", precio: 250.000 }));
 
 mostrarCarrito.addEventListener("click", () => {
-    // Generar el mensaje del carrito
-    let mensajeCarrito = generarMensajeCarrito();
-    // Mostrar el mensaje en una alerta
+    // mensaje carrito
+    let mensajeCarrito = CrearMensaje();
+    // Mostrar el mensaje 
     alert(mensajeCarrito);
 });
 
@@ -56,14 +56,13 @@ eliminarProducto.addEventListener("click", () => {
 
 // Funciones 
 function actualizarCantidad() {
-    // Actualiza el número en el botón
     productosCantidad.textContent = cantidadEnCarrito; 
 }
-
+//actualizar y reiniciar productos
 function vaciarCarrito() {
     productos.length = 0; 
-    cantidadEnCarrito = 0; // Reiniciar la cantidad
-    actualizarCantidad(); // Actualizar la visualización
+    cantidadEnCarrito = 0;
+    actualizarCantidad(); 
     actualizarLocalStorage();
 }
 
@@ -79,18 +78,16 @@ function actualizarLocalStorage() {
     localStorage.setItem("productos", JSON.stringify(productos));
 }
 
-function generarMensajeCarrito() {
-    // Inicializar la variable para el mensaje
+function CrearMensaje() {
     let mensaje = "Productos en el carrito:\n";
     let total = 0;
 
-    // Recorremos el array de productos para construir el mensaje
     productos.forEach((producto, index) => {
         mensaje += `${index + 1}. ${producto.nombre} - $${producto.precio.toFixed(2)}\n`;
         total += producto.precio;
     });
 
-    // Agregar el total al mensaje
+    // total
     mensaje += `\nTotal: $${total.toFixed(2)}`;
 
     return mensaje;

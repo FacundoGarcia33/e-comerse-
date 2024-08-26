@@ -1,0 +1,11 @@
+[
+
+    { "id": "Teclado", "nombre":"Teclado Gamer", "precio": 50.00 },
+    { "id": "Monitor", "nombre":"Monitor de 1000 pulgadas", "precio": 150.00 },
+    { "id": "Mouse gamer",  "nombre": "Mouse gamer", "precio": 30.00 },
+    { "id": "PC gamer", "nombre":"Pc gamer 4GB", "precio": 600.00 },
+    { "id": "Teclado + mouse", "nombre":"Teclado + mouse brb", "precio": 65.00 },
+    { "id": "Parlante JDB","nombre":"Parlante JDB Box Box-3", "precio": 550.00 },
+    { "id": "Parlante JDB","nombre":"Parlante JDB Box Box-3 camuflado", "precio": 570.00 },
+    { "id": "Silla gamer","nombre":"Silla gamer reclinable", "precio": 250.00 }
+]
